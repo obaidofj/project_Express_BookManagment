@@ -5,6 +5,9 @@ const app = express();
 const port = 3000;
 app.use(bodyParser.json());
 // app.use(cors());
+app.get("/health", function (req, res) {
+    res.sendStatus(200);
+});
 // Initialize the book routes
 app.use('/api/books', BookRoutes);
 app.listen(port, () => {

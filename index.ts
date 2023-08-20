@@ -8,7 +8,9 @@ const port = 80;
 
 app.use(bodyParser.json());
 // app.use(cors());
-
+app.get("/health", function (req, res) {
+	res.sendStatus(200);
+})
 // Initialize the book routes
 app.use('/api/books', BookRoutes);
 
