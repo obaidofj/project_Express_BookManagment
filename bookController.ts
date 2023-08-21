@@ -63,7 +63,7 @@ export class BookController {
   }
 
   queryBooksByName(req: Request, res: Response) {
-    const name = req.query.name?.toString().toLowerCase();
+    const name = req.query.name?.toString().toLowerCase() || ''; 
     const matchedBooks = booksData.filter(
       (book) => book.title.toLowerCase().includes(name)
     );
