@@ -1,14 +1,13 @@
 import express from 'express';
-import dotenv from "dotenv";
+
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import { BookRoutes } from './bookRoutes.js';
 
 const app = express();
 
-dotenv.config()
 
-const PORT = process.env.PORT || 3000;
+const PORT = 80;
 
 app.use(bodyParser.json());
 // app.use(cors());
